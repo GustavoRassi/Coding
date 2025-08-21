@@ -1,0 +1,69 @@
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <map>
+using namespace std;
+
+int main()
+{
+    ofstream outFile("trees.txt");
+    outFile << "Red Alder\n";
+    outFile << "Ash\n";
+    outFile << "Aspen\n";
+    outFile << "Basswood\n";
+    outFile << "Ash\n";
+    outFile << "Beech\n";
+    outFile << "Yellow Birch\n";
+    outFile << "Ash\n";
+    outFile << "Cherry\n";
+    outFile << "Cottonwood\n";
+    outFile << "Ash\n";
+    outFile << "Cypress\n";
+    outFile << "Red Elm\n";
+    outFile << "Gum\n";
+    outFile << "Hackberry\n";
+    outFile << "White Oak\n";
+    outFile << "Hickory\n";
+    outFile << "Pecan\n";
+    outFile << "Hard Maple\n";
+    outFile << "White Oak\n";
+    outFile << "Soft Maple\n";
+    outFile << "Red Oak\n";
+    outFile << "Red Oak\n";
+    outFile << "White Oak\n";
+    outFile << "Poplan\n";
+    outFile << "Sassafras\n";
+    outFile << "Sycamore\n";
+    outFile << "Black Walnut\n";
+    outFile << "Willow";
+    outFile.close();
+
+    ifstream inFile("trees.txt");
+    if (!inFile)
+    {
+        cout << "File could not open." << endl;
+        return 1;
+    }
+
+    map<string, int> trees;
+    string tree;
+    double total = 0;
+    double percentage = 0;
+
+    while (getline(inFile, tree))
+    {
+        if (tree.empty())
+            continue;
+        trees[tree]++;
+        total++;
+    }
+
+    for (auto &t: trees)
+    {
+        percentage = (t.second * 100) / total;
+        cout << t.first << " ";
+        cout << fixed << setprecision(4) << percentage << "%" << endl;
+    }
+
+    return 0;
+}
