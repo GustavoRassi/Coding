@@ -1,12 +1,12 @@
 # 🧠 What I Learned
-- File I/O: Write to files using ofstream and read line by line using ifstream and getline().
-- Maps (map<string,int>): Counted the frequency of each tree species efficiently. Learned that accessing a non-existent key initializes it to 0.
-- Loops and conditionals: Used while loops to process file lines and continue to skip blank lines.
-- Data types and arithmetic: Used double to handle percentages and avoid integer division errors.
-- Percentage calculation: Calculated frequency percentages for each tree species.
-- Output formatting: Applied fixed and setprecision to format decimal output neatly.
-- Project integration: Combined multiple skills (file handling, data structures, loops, arithmetic, formatting) to solve a real world data analysis problem.
-- Programming patterns: Practiced frequency counting and percentage calculations, as seen in statistics and data analysis.
+- **File I/O**: Write to files using `ofstream` and read line by line using `ifstream` and `getline()`.
+- **Maps** `map<string,int>`: Counted the frequency of each tree species efficiently. Learned that accessing a non-existent key initializes it to `0`.
+- **Loops and conditionals**: Used while loops to process file lines and continue to skip blank lines.
+- **Data types and arithmetic**: Used double to handle percentages and avoid integer division errors.
+- **Percentage calculation**: Calculated frequency percentages for each tree species.
+- **Output formatting**: Applied fixed and setprecision to format decimal output neatly.
+- **Project integration**: Combined multiple skills (file handling, data structures, loops, arithmetic, formatting) to solve a real world data analysis problem.
+- **Programming patterns**: Practiced frequency counting and percentage calculations, as seen in statistics and data analysis.
 
 # 🎯 Problem Description
 Hardwoods are the botanical group of trees that have broad leaves, produce a fruit or nut, and generally go dormant in the winter.
