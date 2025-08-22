@@ -1,2 +1,2 @@
-# LeetCode
-* Repository where I save the code I develop for LeetCode problems.
+# Code Solutions
+* Repository where I save solutions I developed for coding problems.
