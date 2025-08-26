@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+    // Sample input
     ofstream outFile("cd.txt");
     outFile << "3 3\n";
     outFile << "1\n";
@@ -54,9 +55,10 @@ int main()
     // Look for intersection
     int count = 0;
     for (int i: jack)
-        if (jill.count(i)) // COunt every time they have a cd in common
+        if (jill.count(i)) // Count every time they have a cd in common
             count++;
 
+    // Output
     cout << count << endl;
 
     return 0;
