@@ -5,18 +5,6 @@ using namespace std;
 
 int main()
 {
-    // Sample input
-    ofstream outFile("cd.txt");
-    outFile << "3 3\n";
-    outFile << "1\n";
-    outFile << "2\n";
-    outFile << "3\n";
-    outFile << "1\n";
-    outFile << "2\n";
-    outFile << "4\n"; 
-    outFile << "0 0";
-    outFile.close();
-    
     set<int> jack; // Jack's cds
     set<int> jill; // Jills cd's
     int n, m; // Number of cd's of Jack and Jill
