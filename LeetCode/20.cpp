@@ -7,7 +7,7 @@ bool isValid(string);
 
 int main()
 {
-    ifstream inFile("testcases.txt");
+    ifstream inFile("20_testcases.txt");
     string testcase;
 
     while (getline(inFile, testcase))

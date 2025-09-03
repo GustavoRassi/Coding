@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     // Open file
-    ifstream inFile("trees.txt");
+    ifstream inFile("10226_testcase.txt");
     if (!inFile) // Finish program if the file didn't open
     {
         cout << "File could not open." << endl;
