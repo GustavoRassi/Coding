@@ -1,3 +1,5 @@
+// UVA11742 - Social Constraints
+
 #include <iostream>
 #include <numeric>
 #include <fstream>

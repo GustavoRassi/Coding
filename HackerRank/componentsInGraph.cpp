@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-vector<int> connectedComponents(vector<pair<int,int>>& edges)
+vector<int> connectedComponents(vector<pair<int,int> >& edges)
 {
     // Find maximum node value
     int maxNode = 0;
@@ -11,7 +11,7 @@ vector<int> connectedComponents(vector<pair<int,int>>& edges)
         maxNode = max({maxNode, e.first, e.second});
 
     // Build adjacency list
-    vector<vector<int>> adj(maxNode + 1);
+    vector<vector<int> > adj(maxNode + 1);
     for (auto &e : edges)
     {
         int u = e.first, v = e.second;
@@ -69,6 +69,8 @@ int main()
 
     int n; // number of edges
     inFile >> n;
+    
+    
 
     vector<pair<int,int> > edges(n);
     for (int i = 0; i < n; i++)
