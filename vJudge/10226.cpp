@@ -2,19 +2,16 @@
 
 #include <iostream>
 #include <iomanip>
-#include <fstream>
+// #include <fstream>
 #include <map>
 using namespace std;
 
 int main()
 {
-    // Open file
-    ifstream inFile("10226_testcase.txt");
-    if (!inFile) // Finish program if the file didn't open
-    {
-        cout << "File could not open." << endl;
-        return 1;
-    }
+    // ifstream inFile("10226_testcase.txt");
+
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     // Initialize map to store and count the trees
     map<string, int> trees;
@@ -23,7 +20,7 @@ int main()
     double percentage = 0;
 
     // Go through every line of the txt file
-    while (getline(inFile, tree))
+    while (cin >> tree)
     {
         if (tree.empty()) // Skip empty lines
             continue;

@@ -1,5 +1,7 @@
+// UVA 1648 - Dynamic Range Sum Queries [Fenwick Tree]
+
 #include <iostream>
-#include <fstream>
+// #include <fstream>
 #include <vector>
 using namespace std;
 
@@ -24,7 +26,8 @@ class FenwickTree {
         long long sum(int index)
         {
             long long result = 0;
-            while (index > 0) {
+            while (index > 0)
+            {
                 result += tree[index];
                 index -= index & -index;
             }
@@ -39,34 +42,32 @@ class FenwickTree {
 
 int main() 
 {
-    ifstream inFile("1648_testcase.txt");
-    if (!inFile)
-    {
-        cout << "File could not be open\n";
-        return -1;
-    }
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    // ifstream cin("1648_testcase.txt");
 
     int n, q;
-    inFile >> n >> q;
+    cin >> n >> q;
 
     vector<long long> arr(n + 1);
     FenwickTree ft(n);
 
     for (int i = 1; i <= n; ++i)
     {
-        inFile >> arr[i];
+        cin >> arr[i];
         ft.add(i, arr[i]);
     }
 
     while (q--)
     {
         int type;
-        inFile >> type;
+        cin >> type;
         if (type == 1)
         {
             int k;
             long long u;
-            inFile >> k >> u;
+            cin >> k >> u;
             long long delta = u - arr[k];
             arr[k] = u;
             ft.add(k, delta);
@@ -74,7 +75,7 @@ int main()
         else
         {
             int a, b;
-            inFile >> a >> b;
+            cin >> a >> b;
             cout << ft.range_sum(a, b) << endl;
         }
     }

@@ -1,8 +1,8 @@
-// UVA11849 - CD
+// UVA 11849 - CD
 
 #include <set>
 #include <iostream>
-#include <fstream>
+// #include <fstream>
 using namespace std;
 
 int main()
@@ -11,25 +11,22 @@ int main()
     set<int> jill; // Jills cd's
     int n, m; // Number of cd's of Jack and Jill
 
-    // Check if file opens
-    ifstream inFile("cd.txt");
-    if(!inFile)
-    {
-        cout << "File could not open." << endl;
-        return 1;
-    }
+    // ifstream cin("cd.txt");
+
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     // Read txt file by line
-    while(inFile >> n >> m)
+    while(cin >> n >> m)
     {
-        if (n == 0 && m == 0) // inFile gets to the end (0 0)
+        if (n == 0 && m == 0) // cin gets to the end (0 0)
             break;
         
         // Read Jack's cds
         for(int i = 0; i < n; i++)
         {
             int cd;
-            inFile >> cd;
+            cin >> cd;
             jack.insert(cd);
         }
 
@@ -37,7 +34,7 @@ int main()
         for (int x = 0; x < m; x++)
         {
             int cd;
-            inFile >> cd;
+            cin >> cd;
             jill.insert(cd);
         }
     }
