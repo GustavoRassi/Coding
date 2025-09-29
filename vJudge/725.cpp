@@ -1,5 +1,6 @@
+// UVA 725 - Division
+
 #include <iostream>
-#include <fstream>
 #include <iomanip>
 #include <string>
 #include <set>
@@ -9,18 +10,16 @@ bool uniqueDigits(int, int);
 
 int main()
 {
-    ifstream inFile("725_testcase.txt");
-    if(!inFile)
-    {
-        cout << "File could not open\n";
-        return 1;
-    }
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    // ifstream cin("725_testcase.txt");
 
     double N;
     double x = 98765;
     double y = 1234;
 
-    while(inFile >> N)
+    while(cin >> N)
     {
         bool found = false; // Identify when no solution is found for N
 
