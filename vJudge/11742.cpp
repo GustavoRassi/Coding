@@ -1,8 +1,8 @@
-// UVA11742 - Social Constraints
+// UVA 11742 - Social Constraints
 
 #include <iostream>
 #include <numeric>
-#include <fstream>
+// #include <fstream>
 #include <vector>
 using namespace std;
 
@@ -12,21 +12,24 @@ struct Constraint {
 
 int main()
 {
-    ifstream inFile("11742_testcase.txt");
-    if (!inFile)
-    {
-        cout << "File could not open\n";
-        return -1;
-    }
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
+    // ifstream cin("11742_testcase.txt");
+    // if (!cin)
+    // {
+    //     cout << "File could not open\n";
+    //     return -1;
+    // }
     int n, m;
-    while (inFile >> n >> m) 
+    while (cin >> n >> m) 
     {
         if (n == 0 && m == 0)
             break;
 
         vector<Constraint> constraints(m);
         for (int i = 0; i < m; i++) 
-            inFile >> constraints[i].a >> constraints[i].b >> constraints[i].c;
+            cin >> constraints[i].a >> constraints[i].b >> constraints[i].c;
 
         vector<int> perm(n);
         iota(perm.begin(), perm.end(), 0);

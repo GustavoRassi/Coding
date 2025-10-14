@@ -1,7 +1,7 @@
 // UVA 336 - A Node Too Far 
 
 #include <iostream>
-#include <fstream>
+// #include <fstream>
 #include <map>
 #include <vector>
 #include <queue>
@@ -40,7 +40,8 @@ int bfs(map<int, vector<int>> &graph, int start, int ttl)
     return visited.size();
 }
 
-int main() {
+int main()
+{
     // ifstream cin("336_tc.txt");
     // if (!cin) {
     //     cerr << "Error: could not open input.txt" << endl;
