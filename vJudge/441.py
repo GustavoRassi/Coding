@@ -4,7 +4,7 @@ from itertools import combinations
 
 def main():
     # Open and read the file
-    file = "/Users/gustavorassi/Library/Mobile Documents/com~apple~CloudDocs/Computer Science/Courses/CCOM3135/Coding-Problems/Coding/vJudge/441_tc.txt"
+    file = "441_tc.txt"
     with open(file, "r") as cin:
         lines = cin.readlines()
     
